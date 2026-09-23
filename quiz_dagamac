@@ -8,7 +8,6 @@ int main() {
     printf("      DAILY SAVINGS TRACKER\n");
     printf("=================================\n");
 
-    // Ask the user for savings for 7 days
     for (day = 1; day <= 7; day++) {
         printf("Enter savings for Day %d: ", day);
         scanf("%f", &savings);
@@ -16,17 +15,14 @@ int main() {
         total += savings;
     }
 
-    // Compute the average
     average = total / 7;
 
-    // Display the results
     printf("\n=================================\n");
     printf("        SAVINGS SUMMARY\n");
     printf("=================================\n");
     printf("Total Savings : PHP %.2f\n", total);
     printf("Daily Average : PHP %.2f\n", average);
 
-    // Check if the goal is reached
     if (total >= 500) {
         printf("Status: GOAL REACHED!\n");
         printf("Congratulations! You reached your weekly savings goal.\n");
